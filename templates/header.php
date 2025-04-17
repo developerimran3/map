@@ -1,3 +1,42 @@
+<?php
+if (file_exists(__DIR__ . "/../autoload.php")) {
+  require_once __DIR__ . "/../autoload.php";
+}
+
+/**
+ * Log out system
+ */
+session_start();
+?>
+<?php if (isset($_GET['logout']) && $_GET['logout'] == 'success') {
+  /**
+   * session destroy
+   */
+
+  session_destroy();
+
+  /**
+   *  cookie destroy
+   */
+  setcookie('user_login_id', '', time() - (60 * 60 * 365 * 10));
+
+
+  header("location:login.php");
+}
+
+/**
+ * Profile Page Access Security
+ */
+
+if (!isset($_SESSION['id']) && !isset($_SESSION['name']) && !isset($_SESSION['email'])) {
+  header("location:login.php");
+}
+
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,8 +66,11 @@
   <link rel="stylesheet" href="css/bootstrap-select.css" />
   <!-- scrollbar css -->
   <link rel="stylesheet" href="css/perfect-scrollbar.css" />
+  <!-- data table css -->
+  <!-- <link href="https://cdn.datatables.net/v/bs4/dt-2.1.8/datatables.min.css" rel="stylesheet"> -->
   <!-- custom css -->
   <link rel="stylesheet" href="css/custom.css" />
+
   <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>

@@ -7,8 +7,22 @@
  */
 function createAlert($msg, $type = "danger")
 {
-    return "<p class=\"alert alert-{$type} d-flex justify-content-between\">{$msg}<button class=\"btn-close\"data-bs-dismiss=\"alert\"></button></p>";
+    return "<div class= \"alert alert-{$type} alert-dismissible fade show\" role=\"alert\">
+  <strong>{$msg}</strong> 
+  <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
+    <span aria-hidden=\"true\">&times;</span>
+  </button>
+</div>";
 }
+
+
+
+
+function msg($msg, $type = "danger")
+{
+    return "<div class=\"alert alert-{$type} d-flex justify-content-between alert-dismissible fade show\"role=\"alert\"><strong>{$msg}</strong><button type=\"button\"class=\"btn-close\"data-bs-dismiss=\"alert\"></button></div>";
+}
+
 
 /**
  * Get old form values after submit a form 

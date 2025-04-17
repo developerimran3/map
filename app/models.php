@@ -83,3 +83,35 @@ function delete(string $tableName, int $id)
     $statement = connect()->prepare($sql);
     $statement->execute([$id]);
 }
+
+
+/**
+ * data check with database
+ */
+
+function dataCheck($connection, $colam_name, $data, $tableName)
+{
+    $sql = "SELECT $colam_name FROM $tableName WHERE $colam_name='$data'";
+    $data = $connection->query($sql);
+    $num = $data->rowCount();
+    if ($num > 0) {
+        return false;
+    } else {
+        return true;
+    }
+}
+/**
+ * data Base check with username, Password
+ */
+
+function dataBaseCheck($connection, $colam_name, $data, $tableName)
+{
+    $sql = "SELECT * FROM $tableName WHERE $colam_name='$data'";
+    $data = $connection->query($sql);
+    $num = $data->rowCount();
+    if ($num > 0) {
+        return false;
+    } else {
+        return true;
+    }
+}
