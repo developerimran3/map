@@ -103,6 +103,20 @@
                                                                     <a class="btn btn-sm btn-danger" href="#"><i class="fa fa-trash"></i></a>
                                                                 </td>
                                                             </tr>
+                                                            <tr class="sonali_bank">
+                                                                <td>1</td>
+                                                                <td>s. ali weaving factory ltd</td>
+                                                                <td>C-1010121</td>
+                                                                <td>01/11/2024</td>
+                                                                <td>1200.00</td>
+                                                                <td>100.00</td>
+                                                                <td class="font-weight-bold text-primary">120.00</td>
+                                                                <td class="font-weight-bold">ARTIFICIAL LEATHER</td>
+                                                                <td>
+                                                                    <a class="btn btn-sm btn-warning" href="#"><i class="fa fa-edit"></i></a>
+                                                                    <a class="btn btn-sm btn-danger" href="#"><i class="fa fa-trash"></i></a>
+                                                                </td>
+                                                            </tr>
                                                         </tbody>
                                                     </table>
                                                 </div>
