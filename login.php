@@ -12,7 +12,7 @@ session_start();
 if (isset($_COOKIE['user_login_id'])) {
 
     $user_id = $_COOKIE['user_login_id'];
-    $sql = "SELECT * FROM users WHERE id=' $user_id' ";
+    $sql = "SELECT * FROM register WHERE id=' $user_id' ";
     $data = connect()->query($sql);
     $login_pass = $data->fetch(PDO::FETCH_ASSOC);
 
@@ -65,7 +65,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['signin'])) {
         $msg = createAlert("All Fields Are Required!");
     } else {
 
-        $sql = "SELECT * FROM users WHERE email='$email' ";
+        $sql = "SELECT * FROM register WHERE email='$email' ";
         $data = connect()->query($sql);
         $login_pass = $data->fetch(PDO::FETCH_ASSOC);
         $count = $data->rowCount();

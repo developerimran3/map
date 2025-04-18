@@ -9,6 +9,7 @@
 </div>
 </div>
 <!-- jQuery -->
+
 <script src="js/jquery.min.js"></script>
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
@@ -29,11 +30,15 @@
     var ps = new PerfectScrollbar('#sidebar');
 </script>
 <!-- custom js -->
+<script src="ajax/ajax.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 <script src="js/chart_custom_style1.js"></script>
 <script src="js/custom.js"></script>
 <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
 <script src="https://cdn.datatables.net/v/bs5/jq-3.7.0/dt-2.1.7/datatables.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 
 </html>

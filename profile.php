@@ -22,146 +22,217 @@
                                 </div>
                             </div>
                         </div>
-
-                        <!-- table srart -->
                         <div class="row column1">
-                            <div class="col-md-7">
-                                <div class="white_shd full p-4">
-                                    <div class="heading1  margin_0">
-                                        <h2 class="">Update Profile</h2>
+
+                            <!-- Form Start -->
+                            <div class="col-md-6">
+                                <div class="white_shd full pt-2 ">
+                                    <div class="col-md-12">
+                                        <div class=" full">
+                                            <div class="w3-responsive">
+                                                <table width="100%" border="0" align="center" cellpadding="5" cellspacing="1" class=" table map entryTable">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td colspan="4" id="entryTableHeader" align="left">Update User Profile</td>
+                                                        </tr>
+                                                        <form action="">
+                                                            <tr>
+                                                                <td align="right" class="label">Name</td>
+                                                                <td colspan="2" class="content"><input class="form-control" name="name" type="text">
+                                                                </td>
+                                                                <td width="29%" rowspan="4" valign="top" align="center"
+                                                                    class="content"> <input class="form-control" name="name" type="file">
+                                                                    <img src="https://i.pinimg.com/736x/c6/34/60/c6346030acb7a780af81803c84a06680.jpg" width="110" height="120">
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="22%" align="right" class="label">Father's Name </td>
+                                                                <td colspan="2" class="content"><input class="form-control" name="father_name" type="text"></td>
+                                                            </tr>
+                                                            <tr>
+
+                                                                <td align="right" class="label">Mother's Name</td>
+                                                                <td colspan="2" class="content"><input class="form-control" name="mother_name" type="text"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="right" class="label">Dath Of Birth</td>
+                                                                <td colspan="2" class="content"><input class="form-control" name="date_of_birth" type="date"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="right" class="label">Gender</td>
+                                                                <td colspan="4" class="content">
+                                                                    <input type="radio" name="gender" id="">
+                                                                    <label for="">Male</label>
+                                                                    <input type="radio" name="gender" id="gender">
+                                                                    <label for="">Female</label>
+                                                                    <input type="radio" name="gender" id="gender">
+                                                                    <label for="">Others</label>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="right" class="label">Blood Group</td>
+                                                                <td colspan="4" class="content">
+                                                                    <select name="blood" class="form-control" id="">
+                                                                        <option value="">--select--</option>
+                                                                        <option value="a+">A+</option>
+                                                                        <option value="a-">A-</option>
+                                                                        <option value="b+">B+</option>
+                                                                        <option value="b-">B-</option>
+                                                                        <option value="o+">O+</option>
+                                                                        <option value="o-">O-</option>
+                                                                        <option value="ab+">AB+</option>
+                                                                        <option value="ab-">AB-</option>
+                                                                    </select>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="right" class="label">Mobile No</td>
+                                                                <td colspan="4" class="content"><input class="form-control" name="phone" type="text">
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="right" class="label">Email</td>
+                                                                <td colspan="4" class="content"><input class="form-control" name="email" type="email">
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="right" class="label">National ID</td>
+                                                                <td colspan="4" class="content"><input class="form-control" name="nid_no" type="text">
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="2" align="center" class="label">Present Address</td>
+                                                                <td colspan="2" align="center" class="label">Permanent Address</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="right" class="label">Village</td>
+                                                                <td width="27%" class="content"><input class="form-control" name="pr_vill" type="text"></td>
+                                                                <td width="22%" align="right" class="label">Village</td>
+                                                                <td class="content"><input class="form-control" name="per_vill" type="text"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="right" class="label">Post/ Word No</td>
+                                                                <td class="content"><input class="form-control" name="pr_post" type="text"></td>
+                                                                <td class="label" align="right">Post/ Word No</td>
+                                                                <td class="content"><input class="form-control" name="per_post" type="text"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="right" class="label">Upazila</td>
+                                                                <td class="content"><input class="form-control" name="pr_upazila" type="text"></td>
+                                                                <td class="label" align="right">Upazila</td>
+                                                                <td class="content"><input class="form-control" name="per_upazila" type="text"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="right" class="label">Distict</td>
+                                                                <td class="content"><input class="form-control" name="pr_distict" type="text"></td>
+                                                                <td class="label" align="right">Distict</td>
+                                                                <td class="content"><input class="form-control" name="per_distict" type="text"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="3" align="center" class="label">&nbsp;</td>
+                                                                <td class="label"><button type="submit" class="main_bt">Update</button></td>
+                                                            </tr>
+                                                        </form>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <form action="" method="post" enctype="multipart/form-data">
-                                        <div class="form-group row">
-                                            <div class="col-md-6">
-                                                <div class="row">
-                                                    <label class="col-md-3 col-form-label required-field" for="">Name</label>
-                                                    <div class="col-md-9">
-                                                        <input class="form-control " name="name" placeholder="Type Your Name" type="text" value="">
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-md-6">
-                                                <div class="row">
-                                                    <label class="col-md-3 col-form-label required-field" for="f_name">Father's Name</label>
-                                                    <div class="col-md-9">
-                                                        <input class="form-control " name="f_name" placeholder="Type Your Father's Name" type="text" value="">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <div class="col-md-6">
-                                                <div class="row">
-                                                    <label class="col-md-3 col-form-label required-field" for="m_name">Mother's Name</label>
-                                                    <div class="col-md-9">
-                                                        <input class="form-control " name="m_name" placeholder="Type Your Mother's Name" type="text" value="">
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-md-6">
-                                                <div class="row">
-                                                    <label class="col-md-3 col-form-label required-field" for="dob">Date of Birth</label>
-                                                    <div class="col-md-9">
-                                                        <input class="form-control " name="dob" type="date" value="">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <div class="col-md-6">
-                                                <div class="row">
-                                                    <label class="col-md-3 col-form-label required-field" for="address">Address</label>
-                                                    <div class="col-md-9">
-                                                        <input class="form-control " name="address" placeholder="Type Your Address" type="text" value="">
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-md-6">
-                                                <div class="row">
-                                                    <label class="col-md-3 col-form-label required-field" for="phone">Mobile No</label>
-                                                    <div class="col-md-9">
-                                                        <input class="form-control " name="phone" placeholder="Type Your Mobile No" type="text" value="">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <div class="col-md-6">
-                                                <div class="row">
-                                                    <label class="col-md-3 col-form-label required-field" for="gender">Gender</label>
-                                                    <div class="col-md-9">
-                                                        <input class="form-control " name="gender" type="text" value="">
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-md-6">
-                                                <div class="row">
-                                                    <label class="col-md-3 col-form-label required-field" for="email">Email</label>
-                                                    <div class="col-md-9">
-                                                        <input class="form-control " name="email" type="text" value="">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class=" my-3">
-                                            <button type="submit" class="main_bt">Update</button>
-                                        </div>
-                                    </form>
                                 </div>
                             </div>
-                            <div class="col-md-5">
-                                <div class="white_shd full p-4">
-                                    <div class="heading1  margin_0">
-                                        <h2 class="">All New Documents</h2>
-                                    </div>
-                                    <div class="row column1">
-                                        <div class="col-md-12">
-                                            <div class=" full">
-                                                <div class="heading1 margin_0">
-                                                    <div class="shadow-sm">
-                                                        <div class="card-body">
-                                                            <table class=" table border table-striped">
-                                                                <td class="rounded" id="view_data"><img width="75" height="75" src="https://images.unsplash.com/photo-1560674457-12073ed6fae6?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2FtfGVufDB8fDB8fHww" alt=""></td>
+                            <!-- Form End -->
 
-                                                                <tr>
-                                                                    <td class="title">Name</td>
-                                                                    <td class="colon">:</td>
-                                                                    <td>Rakib Hossain</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td class="title">Email</td>
-                                                                    <td class="colon">:</td>
-                                                                    <td id="email"> developerimran.in@gmail.com</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td class="title">Mobile No</td>
-                                                                    <td class="colon">:</td>
-                                                                    <td>01756041512</td>
-                                                                </tr>
 
-                                                                <tr>
-                                                                    <td class="title">Address</td>
-                                                                    <td class="colon">:</td>
-                                                                    <td>Chittagong</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td class="title">Date of Birth</td>
-                                                                    <td class="colon">:</td>
-                                                                    <td>26</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td class="title">Gender</td>
-                                                                    <td class="colon">:</td>
-                                                                    <td>Male</td>
-                                                                </tr>
-                                                            </table>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                            <!-- Table start -->
+                            <div class="col-md-6">
+                                <div class="white_shd full pt-2">
+                                    <div class="col-md-12">
+                                        <div class=" full">
+                                            <div class="w3-responsive">
+                                                <table width="100%" border="0" align="center" cellpadding="5" cellspacing="1" class="table maps entryTable">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td colspan="4" id="entryTableHeader" align="left">User Profile</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="right" class="label">সদস্য নং</td>
+                                                            <td colspan="2" class="content">1728</td>
+                                                            <td width="29%" rowspan="4" valign="top" align="center" class="content">
+                                                                <img src="https://i.pinimg.com/736x/c6/34/60/c6346030acb7a780af81803c84a06680.jpg" width="110" height="120">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td width="22%" align="right" class="label">Name </td>
+                                                            <td colspan="2" class="content"> আবু হাসান</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="right" class="label">Father's Name </td>
+                                                            <td colspan="2" class="content">মৃত আঃ সালাম</td>
+
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="right" class="label">Mother's Name </td>
+                                                            <td colspan="2" class="content">মোছাঃ মাজেদা বেগম</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="right" class="label">Date of Birth</td>
+                                                            <td colspan="4" class="content">1999-05-15&nbsp; বয়স : 25
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="right" class="label">Gender </td>
+                                                            <td colspan="4" class="content">Male</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="right" class="label">Blood Group </td>
+                                                            <td colspan="4" class="content">এ+</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="right" class="label">Mobile No</td>
+                                                            <td colspan="4" class="content">8801963490881</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="right" class="label">Email</td>
+                                                            <td colspan="4" class="content">abuhasan8976@gmail.com</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="right" class="label">National ID</td>
+                                                            <td colspan="4" class="content">১৯৯৯৪১১৯০২৫০৩০৪৩১</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td colspan="2" align="center" class="label">Present Address</td>
+                                                            <td colspan="2" align="center" class="label">Permanent Address</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="right" class="label">Village</td>
+                                                            <td width="27%" class="content">বড় আঁচড়া</td>
+                                                            <td width="22%" align="right" class="label">Village</td>
+                                                            <td class="content">বড় আঁচড়া</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="right" class="label">Post/ word No</td>
+                                                            <td class="content">বেনাপোল</td>
+                                                            <td class="label" align="right">Post/ word No</td>
+                                                            <td class="content">বেনাপোল</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="right" class="label">Upazila</td>
+                                                            <td class="content">বেনাপোল পোর্ট</td>
+                                                            <td class="label" align="right">Upazila</td>
+                                                            <td class="content">বেনাপোল পোর্ট</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="right" class="label">Distict</td>
+                                                            <td class="content">যশোর</td>
+                                                            <td class="label" align="right">Distict</td>
+                                                            <td class="content">যশোর</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td colspan="3" align="center" class="label">&nbsp; </td>
+                                                            <td class="label"><button type="submit" class="main_bt">Update</button></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
                                             </div>
                                         </div>
                                     </div>

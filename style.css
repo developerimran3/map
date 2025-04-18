@@ -76,6 +76,64 @@
 }
 
 /*------------------------------------------------------------------
+    User profile Form
+-------------------------------------------------------------------*/
+legend {
+  background: #061c40;
+  border: 1px solid #e5e5e5;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 0;
+  margin-left: 14px;
+  padding: 4px 10px;
+  width: 22%;
+}
+
+.map td,
+.map th {
+  padding: 7.4px;
+  vertical-align: middle;
+}
+
+#gender {
+  margin-left: 26px;
+  text-align: center;
+}
+
+/*------------------------------------------------------------------
+    User profile table
+-------------------------------------------------------------------*/
+#entryTableHeader {
+  font-size: 20px;
+  color: #ffffff;
+  background-color: #7f92a4;
+  font-weight: bold;
+  background-position: center;
+}
+
+.maps {
+  border-collapse: separate;
+  background-color: #ddd;
+}
+
+.entryTable .content {
+  background-color: #fff;
+}
+
+.entryTable .label {
+  background-color: #efefef;
+}
+/* .w3-responsive {
+  display: block;
+  overflow-x: auto;
+} */
+
+.table td,
+.table th {
+  border-top: 0px;
+}
+/*------------------------------------------------------------------
     Register Enty table
 -------------------------------------------------------------------*/
 .assessment th {

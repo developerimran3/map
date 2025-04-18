@@ -44,8 +44,8 @@
                                                 <input type="text" name="quantity" class="form-control">
                                             </div>
                                             <div class="col-md-3">
-                                                <label for="pkg_code">Pkgs Code</label>
-                                                <select name="pkg_code" id="" class="form-control">
+                                                <label for="pkgs_code">Pkgs Code</label>
+                                                <select name="pkgs_code" id="" class="form-control">
                                                     <option hidden></option>
                                                     <option value="ROLLS">ROLLS</option>
                                                     <option value="PKGS">PKGS</option>
@@ -63,12 +63,12 @@
                                                 <input type="text" name="bl_no" class="form-control">
                                             </div>
                                             <div class="col-md-3">
-                                                <label for="containerLocation">Container No</label>
-                                                <input type="text" name="containerLocation" class="form-control">
+                                                <label for="containerNo">Container No</label>
+                                                <input type="text" name="containerNo" class="form-control">
                                             </div>
                                             <div class="col-md-3">
-                                                <label for="container_size">Container Size</label>
-                                                <select name="container_size" id="" class="form-control">
+                                                <label for="containerSize">Container Size</label>
+                                                <select name="containerSize" id="" class="form-control">
                                                     <option hidden></option>
                                                     <option value="20' FCL">20' FCL</option>
                                                     <option value="40' FCL">40' FCL</option>
@@ -78,8 +78,8 @@
                                                 </select>
                                             </div>
                                             <div class="col-md-3">
-                                                <label for="container_location">Container Location</label>
-                                                <input type="text" name="container_location" value="Y-" class="form-control">
+                                                <label for="containerLocation">Container Location</label>
+                                                <input type="text" name="containerLocation" value="Y-" class="form-control">
                                             </div>
                                             <div class="col-md-3">
                                                 <label for=" lc_no">Lc Number</label>
@@ -91,8 +91,8 @@
                                             </div>
 
                                             <div class="col-md-3">
-                                                <label for="weight">Gross Weight</label>
-                                                <input type="number" name="weight" class="form-control">
+                                                <label for="grossWeight">Gross Weight</label>
+                                                <input type="number" name="grossWeight" class="form-control">
                                             </div>
 
                                             <div class="col-md-3 ">
@@ -136,24 +136,33 @@
                                                                 <th>Action</th>
                                                             </tr>
                                                         </thead>
-                                                        <tbody>
-                                                            <tr class="new_enty_tr">
-                                                                <td>1</td>
-                                                                <td>s ali weaving factory ltd</td>
-                                                                <td class="font-weight-bold">ARTIFICIAL LEATHER</td>
-                                                                <td>1250 bales</td>
-                                                                <td>maersk vladivostok</td>
-                                                                <td>sitgzpbgx2536597</td>
-                                                                <td>msku1598756x40fcl</td>
-                                                                <td>127224010105</td>
-                                                                <td>28500.00 kg</td>
-                                                                <td>11/12/2024</td>
-                                                                <td>
-                                                                    <a class="btn btn-sm btn-warning data-edit" href="#"><i class="fa fa-edit"></i></a>
-                                                                    <a class="btn btn-sm btn-success" href="#"><i class="fa fa-arrow-circle-right "></i></a>
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
+
+                                                        <?php
+                                                        $data = all('enty');
+                                                        $i = 1;
+                                                        foreach ($data as $item):
+                                                        ?>
+
+                                                            <tbody>
+                                                                <tr class="new_enty_tr">
+                                                                    <td><?php echo $i;
+                                                                        $i++; ?> </td>
+                                                                    <td><?php echo $item->importer_name; ?></td>
+                                                                    <td class="font-weight-bold"><?php echo $item->goods_name; ?></td>
+                                                                    <td><?php echo $item->quantity; ?> <?php echo $item->pkgs_code; ?></td>
+                                                                    <td><?php echo $item->vessel; ?></td>
+                                                                    <td><?php echo $item->bl_no; ?></td>
+                                                                    <td><?php echo $item->containerNo; ?> x <?php echo $item->containerSize; ?></td>
+                                                                    <td><?php echo $item->lc_no; ?></td>
+                                                                    <td><?php echo $item->grossWeight; ?>.00 KGS</td>
+                                                                    <td><?php echo $item->arivel_date; ?></td>
+                                                                    <td>
+                                                                        <a class="btn btn-sm btn-warning data-edit" href="#"><i class="fa fa-edit"></i></a>
+                                                                        <a class="btn btn-sm btn-success" href="#"><i class="fa fa-arrow-circle-right "></i></a>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        <?php endforeach; ?>
                                                     </table>
                                                 </div>
                                             </div>

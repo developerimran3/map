@@ -21,8 +21,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
         $conform_password = false;
     }
     //username check
-    $username_check = dataCheck(connect(), 'username', $username, 'users');
-    $email_check = dataCheck(connect(), 'email', $email, 'users');
+    $username_check = dataCheck(connect(), 'username', $username, 'register');
+    $email_check = dataCheck(connect(), 'email', $email, 'register');
 
     if (empty($username) || empty($name) || empty($email) || empty($password)) {
         $msg = createAlert("All Fields Are Required!");
@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
     } elseif ($email_check == false) {
         $msg = createAlert("Email alrady exists");
     } else {
-        store('users', [
+        store('register', [
             'username'  => $username,
             'name'      => $name,
             'email'     => $email,
