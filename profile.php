@@ -41,8 +41,16 @@
                                                                 <td colspan="2" class="content"><input class="form-control" name="name" type="text">
                                                                 </td>
                                                                 <td width="29%" rowspan="4" valign="top" align="center"
-                                                                    class="content"> <input class="form-control" name="name" type="file">
-                                                                    <img src="https://i.pinimg.com/736x/c6/34/60/c6346030acb7a780af81803c84a06680.jpg" width="110" height="120">
+                                                                    class="content">
+                                                                    <label class="uploaded">
+                                                                        <input type="file" id="profile-photo" name="profile" class="form-control">
+                                                                        <img id="profile-photo-icon" src="https://cnfemployeesunion.com/public/img/demo.png" width="120" height="130">
+                                                                    </label>
+                                                                    <div id="profile-photo-preview" class="preview-image">
+                                                                        <img src="" alt="">
+                                                                        <button type="button" id="profile-photo-close" class=" fa fa-times"></button>
+                                                                        <label class="" for="">Image(150pxX150px)</label>
+                                                                    </div>
                                                                 </td>
                                                             </tr>
                                                             <tr>
@@ -158,7 +166,7 @@
                                                             <td align="right" class="label">সদস্য নং</td>
                                                             <td colspan="2" class="content">1728</td>
                                                             <td width="29%" rowspan="4" valign="top" align="center" class="content">
-                                                                <img src="https://i.pinimg.com/736x/c6/34/60/c6346030acb7a780af81803c84a06680.jpg" width="110" height="120">
+                                                                <img src="https://cnfemployeesunion.com/public/img/demo.png" width="120" height="130">
                                                             </td>
                                                         </tr>
                                                         <tr>
@@ -242,6 +250,26 @@
 
                             <!-- Footer-->
                             <?php include_once __DIR__ . '/templates/footer.php'; ?>
+                            <script>
+                                const ProfilePhoto = document.getElementById('profile-photo');
+                                const ProfilePhotoPreview = document.getElementById('profile-photo-preview');
+                                const ProfilePhotoIcon = document.getElementById('profile-photo-icon');
+                                const ProfilePhotoClose = document.getElementById('profile-photo-close');
+
+                                ProfilePhoto.onchange = (event) => {
+                                    const imageURL = URL.createObjectURL(event.target.files[0]);
+
+                                    ProfilePhotoPreview.children[0].setAttribute('src', imageURL);
+                                    ProfilePhotoIcon.style.display = 'none';
+                                    ProfilePhotoClose.style.display = "block";
+
+                                };
+                                ProfilePhotoClose.onclick = (event) => {
+                                    ProfilePhotoPreview.children[0].setAttribute('src', "");
+                                    ProfilePhotoIcon.style.display = 'block';
+                                    ProfilePhotoClose.style.display = "none";
+                                };
+                            </script>
                             <script>
                                 $("#dataTable").DataTable();
                             </script>
